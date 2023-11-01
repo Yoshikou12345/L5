@@ -1,0 +1,10 @@
+<% @users.each do |e| %>
+<P>
+    UID: <%= e.uid %>
+    PASS: <%= e.pass%>
+    AGE: <%= e.age %>
+    <%= link_to "削除", user_path(e), method: :delete %>
+</P>
+<% end %>
+
+<%= link_to "新規追加", users_new_path %>
